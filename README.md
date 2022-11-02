@@ -1,3 +1,13 @@
+# Additional notes
+
+tweaked to allow it to run rootless in Podman instead of Docker.
+
+Please have a look at the Makefile to look at build and deploy
+
+
+
+
+
 # SFTP
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/atmoz/sftp/build?logo=github) ![GitHub stars](https://img.shields.io/github/stars/atmoz/sftp?logo=github) ![Docker Stars](https://img.shields.io/docker/stars/atmoz/sftp?label=stars&logo=docker) ![Docker Pulls](https://img.shields.io/docker/pulls/atmoz/sftp?label=pulls&logo=docker)
