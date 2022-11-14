@@ -4,6 +4,8 @@ tweaked to allow it to run rootless in Podman instead of Docker.
 
 Please have a look at the Makefile to look at build and deploy
 
+Requires podman
+
 
 
 
@@ -37,7 +39,7 @@ Easy to use SFTP ([SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH
     volumes in separate directories inside the user's home directory
     (/home/user/**mounted-directory**) or just mount the whole **/home** directory.
     Just remember that the users can't create new files directly under their
-    own home directory, so make sure there are at least one subdirectory if you
+    own home directory, so make sure there are at least one subdirectory if youq
     want them to upload files.
   - For consistent server fingerprint, mount your own host keys (i.e. `/etc/ssh/ssh_host_*`)
 
