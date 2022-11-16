@@ -14,14 +14,17 @@ X11Forwarding no
 AllowTcpForwarding no
 
 # Force sftp and chroot jail
-Subsystem sftp internal-sftp
-ForceCommand internal-sftp
-ChrootDirectory %h
+Subsystem sftp internal-sftp -f AUTH  -l VERBOSE 
+ForceCommand internal-sftp -f AUTH -l VERBOSE
+
+ChrootDirectory /home/%u
 
 # Enable this for more logs
 LogLevel VERBOSE
 
-UsePrivilegeSeparation no
+# UsePrivilegeSeparation no
 
 Port 2222
+
+
 
