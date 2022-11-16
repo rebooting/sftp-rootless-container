@@ -16,7 +16,7 @@ COPY files/create-sftp-user /usr/local/bin/
 COPY files/entrypoint /
 
 COPY files/sftplog.conf /etc/rsyslog.d/sftplog.conf
-RUN mkdir -m2777 /logger 
+
 
 EXPOSE 22
 

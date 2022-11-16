@@ -16,7 +16,7 @@ clean:
 
 gen_users:
 	cd files && python3 gen_dummy_users.py 
-	echo "module(load="imuxsock")" > files/sftplog.conf
+	echo "module(load=\"imuxsock\")" > files/sftplog.conf
 	cat files/socket.txt >> files/sftplog.conf 
 	cat files/end_rsync.txt >> files/sftplog.conf 
 

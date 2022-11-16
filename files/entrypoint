@@ -92,7 +92,7 @@ fi
 
 if $startSshd; then
     log "Starting rsyslogd"
-    exec sleep 20 && echo "starting syslog" && /usr/sbin/rsyslogd -n &
+    exec /usr/sbin/rsyslogd -n &
     log "Executing sshd"
     exec /usr/sbin/sshd -D -e
 else
