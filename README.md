@@ -1,4 +1,5 @@
 # Additional notes
+Forked Atmoz/sftp to do some POC. This is not meant for production !
 
 tweaked to allow it to run rootless in Podman instead of Docker.
 
