@@ -19,6 +19,9 @@ ForceCommand internal-sftp -f AUTH -l VERBOSE
 
 ChrootDirectory /home/%u
 
+# set this so that login requires BOTH CORRECT KEY and PASSWORD
+AuthenticationMethods publickey,password
+
 # Enable this for more logs
 LogLevel VERBOSE
 

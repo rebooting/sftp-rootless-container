@@ -68,9 +68,14 @@ fi
 useradd "${useraddOptions[@]}" "$user"
 mkdir -p "/home/$user"
 chown root:root "/home/$user"
+mkdir -p "/home/$user/.ssh"
+echo  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9D9dkHyMkvIIkreiQgBLgJaEZPUCnWgthXENvv80npkP4n2qgfR6prNrXEph9zHwdEFl68NA4d3bNOQkSacZcFGvnDrdKIJ37EhZw5kH6si2cjJlalo1ehf92RiTIsGshwv9kCyusOKnRL3C8uf+LelcS/hORtnEEvt1uIhMeKZLXzTceCEyXm1cpmtDRsvjP7MLFxxvmupdaRh46FHqXE0oU0JLbVG11gg12+GTc3ocp9RvmkU+KJADD2NoCjJIgYTAtmBOFjhwioaFPVZxUav7k0e0sr0ZzXdAXxaQtM2qqf31ZZbTEx3/FtsZyu+x65a8SJCeoJunGqOJMIB4F alvin@devm1" > /home/$user/.ssh/authorized_keys
+chown -R $uid:$gid "/home/$user/.ssh"
+
+
 chmod 755 "/home/$user"
 mkdir -m2755  "/home/$user/dev"
-chmod 777 "/home/$user/dev"
+# chmod 777 "/home/$user/dev"
 #test -L "/home/$user/dev" && 
 
 # ln -s /logger "/home/$user/dev"  

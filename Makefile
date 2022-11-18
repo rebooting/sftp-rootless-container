@@ -20,3 +20,5 @@ gen_users:
 	cat files/socket.txt >> files/sftplog.conf 
 	cat files/end_rsync.txt >> files/sftplog.conf 
 
+key:
+	ssh-keygen -b 2048 -t rsa -f keys/sshkey -q -N ""
