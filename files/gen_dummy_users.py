@@ -1,5 +1,6 @@
 num=1001
-max_users= num +200
+max_users=20
+max_users= num + max_users
 f = open("users.conf", "w")
 while num< (max_users):
     user_row = "{0}:123:{0}:100:upload".format(str(num))
