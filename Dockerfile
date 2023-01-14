@@ -15,7 +15,8 @@ COPY files/create-sftp-user /usr/local/bin/
 COPY files/entrypoint /
 
 COPY files/sftplog.conf /etc/rsyslog.d/sftplog.conf
-
+COPY files/sftp_forwarder.sh /
+RUN chmod +x sftp_forwarder.sh 
 
 EXPOSE 22
 

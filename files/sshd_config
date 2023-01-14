@@ -14,18 +14,23 @@ X11Forwarding no
 AllowTcpForwarding no
 
 # Force sftp and chroot jail
-Subsystem sftp internal-sftp -f AUTH  -l VERBOSE 
-ForceCommand internal-sftp -f AUTH -l VERBOSE
+#Subsystem sftp internal-sftp -f AUTH  -l VERBOSE 
+Subsystem sftp /sftp_forwarder.sh
 
-ChrootDirectory /home/%u
+
+#ForceCommand /bin/bash -x sftp_forwarder.sh
+#ForceCommand internal-sftp -f AUTH -l VERBOSE
+
+
+#ChrootDirectory /home/%u
 
 # set this so that login requires BOTH CORRECT KEY and PASSWORD
 AuthenticationMethods publickey,password
 
 # Enable this for more logs
-LogLevel VERBOSE
+LogLevel DEBUG3
 
-# UsePrivilegeSeparation no
+UsePrivilegeSeparation no
 
 Port 2222
 

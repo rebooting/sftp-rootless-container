@@ -7,6 +7,10 @@ Please have a look at the Makefile to look at build and deploy
 
 Requires podman
 
+custom remote sftp config
+https://unix.stackexchange.com/questions/32307/how-to-set-the-sftp-s-subsystem-option-in-a-configuration-file
+
+
 
 
 https://github.com/atmoz/sftp/issues/86
