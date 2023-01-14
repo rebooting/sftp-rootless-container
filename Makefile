@@ -22,3 +22,6 @@ gen_users:
 
 key:
 	ssh-keygen -b 2048 -t rsa -f keys/sshkey -q -N ""
+
+connect:
+	sftp -P 2222  -o UserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no -i keys/sshkey  1001@localhost
