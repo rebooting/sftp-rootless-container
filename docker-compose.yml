@@ -1,0 +1,12 @@
+version: "2.0"
+services:
+  sftpproxy:
+    image: docker.io/rebooting/sftp
+    privileged: false
+    ports:
+      - 2222:2222
+  jsftp:
+    image: docker.io/rebooting/jsftp
+    privileged: false
+    ports:
+      - 4022:4022
