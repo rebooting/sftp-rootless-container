@@ -29,5 +29,11 @@ LogLevel VERBOSE
 
 Port 2222
 
+Match Group group_200
+    AuthenticationMethods publickey
+    ForceCommand internal-sftp -f AUTH -l VERBOSE
+
+
+
 
 
