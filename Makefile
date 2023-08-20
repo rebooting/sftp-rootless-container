@@ -1,8 +1,8 @@
 .PHONY: build run logs
-build: clean
+build: 
 	podman build -t rebooting/sftp -f Dockerfile .
 run:
-	podman run --rm --name sftp -v ./files/users.conf:/etc/sftp/users.conf:ro -p 2222:2222 -d rebooting/sftp 
+	podman run --rm --name sftp -v $$PWD/files/users.conf:/etc/sftp/users.conf:ro -p 2222:2222 -d rebooting/sftp 
 log:
 	podman logs -f sftp
 
@@ -25,3 +25,10 @@ key:
 
 connect:
 	sftp -P 2222  -o UserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no -i keys/sshkey  1001@localhost
+
+network:
+	# create podman network
+	podman network create sftp-net
+
+launch_on_network:
+	podman run --rm --name sftp --network sftp-net -v $$PWD/files/users.conf:/etc/sftp/users.conf:ro -p 2222:2222 -d rebooting/sftp
